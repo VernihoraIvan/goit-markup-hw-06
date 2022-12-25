@@ -235,7 +235,7 @@ header {
   padding-top: 192px;
   padding-bottom: 192px;
   height: 603px;
-  max-width: 1600px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -757,4 +757,36 @@ footer {
   display: inline-flex;
   align-items: center;
   transition: background-color 250ms var(--timing-function);
+}
+
+.text-area {
+  resize: none;
+}
+
+.modal-form {
+  padding: 72px 24px 24px 24px;
+  display: flex;
+
+  flex-direction: column;
+}
+
+.modal-text {
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+label {
+  margin-bottom: 4px;
+}
+
+textarea {
+  padding-top: 8px;
+  padding-left: 16px;
+  margin-bottom: 16px;
+}
+
+input {
+  margin-bottom: 8px;
 }

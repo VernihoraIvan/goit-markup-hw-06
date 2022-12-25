@@ -756,4 +756,5 @@ footer {
   justify-content: center;
   display: inline-flex;
   align-items: center;
+  transition: background-color 250ms var(--timing-function);
 }

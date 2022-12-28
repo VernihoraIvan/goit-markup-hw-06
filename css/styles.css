@@ -951,7 +951,26 @@ input:hover + svg {
   overflow: hidden;
 }
 
-.checkbox:checked {
-  width: 100px;
-  height: 100px;
+.icon-checkbox {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid black;
+  border-radius: 4px;
+  transition: background-color 250ms var(--timing-function);
+}
+
+.checkbox:checked + .icon-checkbox {
+  background-color: #404bbf;
+  background-image: url("../images/check-box.svg");
+  background-size: contain;
+  background-origin: border-box;
+  border-color: #404bbf;
+}
+
+.policy {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 8px;
+  align-items: center;
 }

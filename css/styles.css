@@ -261,6 +261,7 @@ button {
   line-height: 1.17;
   transition: background-color 250ms var(--timing-function),
     box-shadow 250ms var(--timing-function);
+  justify-content: center;
 }
 
 .blue-button:hover,
@@ -522,6 +523,7 @@ button {
 .bottom-container {
   width: 1158px;
   display: flex;
+  align-items: center;
 }
 
 .logo-block {
@@ -532,6 +534,7 @@ button {
   color: var(--main-background-color);
   font-size: 16px;
   line-height: 1.5;
+  font-weight: 500;
 }
 
 .social-media-list {
@@ -719,7 +722,6 @@ footer {
 
 .modal {
   position: absolute;
-  height: 576px;
   width: 408px;
   top: 88px;
   left: 50%;
@@ -761,6 +763,7 @@ footer {
 
 .text-area {
   resize: none;
+  height: 120px;
 }
 
 .modal-form {
@@ -775,18 +778,180 @@ footer {
   line-height: 1.5;
   text-align: center;
   margin-bottom: 14px;
+  color: var(--title-color-navyblue);
 }
 
 label {
   margin-bottom: 4px;
+  color: #8e8f99;
+  font-size: 12px;
+  line-height: 1.16;
 }
 
 textarea {
+  margin-bottom: 16px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+textarea::placeholder {
+  font-size: 12px;
+  line-height: 16px;
+  color: rgba(117, 117, 117, 0.5);
+  letter-spacing: 0.04em;
   padding-top: 8px;
   padding-left: 16px;
-  margin-bottom: 16px;
+  outline: none;
 }
 
 input {
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transition: border 250ms var(--timing-function);
+  /* outline: none; */
+}
+
+.inputs {
   margin-bottom: 8px;
+  height: 40px;
+  padding-left: 38px;
+  width: 100%;
+}
+
+input:hover,
+input:focus,
+input:active {
+  border: 1px solid var(--active-blue-button-color);
+  fill: var(--active-blue-button-color);
+}
+
+/* input:focus.svg-modal,
+input:active.svg-modal  */
+.inputs:hover > .svg-modal {
+  fill: var(--blue-button-color);
+}
+
+.send {
+  width: 169px;
+  margin: 0 auto;
+}
+
+.policy {
+  color: #757575;
+}
+
+.policy a {
+  text-decoration: underline;
+  color: var(--blue-button-color);
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.modal-form svg {
+  position: absolute;
+  top: 32px;
+  left: 19px;
+  transition: fill 250ms var(--timing-function);
+}
+
+.form-container {
+  position: relative;
+}
+
+input:focus + svg,
+input:hover + svg {
+  fill: var(--blue-button-color);
+}
+
+.subscribe {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: var(--blue-button-text-color);
+}
+
+.subscribe-container {
+  margin-left: 80px;
+  align-items: center;
+}
+.use-send {
+  fill: var(--blue-button-text-color);
+  width: 24px;
+  height: 20px;
+}
+
+.svg-send {
+  margin-left: 16px;
+}
+
+.subscribe-form {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.subscribe-input {
+  width: 100%;
+  margin-top: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  width: 264px;
+  height: 40px;
+  background-color: inherit;
+  color: #ffffff;
+}
+
+.subscribe-button {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 4px;
+  padding: 8px 24px 8px 24px;
+  background-color: var(--blue-button-color);
+  color: var(--blue-button-text-color);
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  transition: background-color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function);
+  align-self: flex-end;
+}
+
+.subscribe-input::placeholder {
+  padding: 8px 212px 8px 16px;
+}
+
+.subscribe-button:hover,
+.subscribe-button:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: #404bbf;
+}
+
+.subscribe-button:active {
+  box-shadow: 0px 4px 4px 0px #00000026;
+  background-color: var(--active-blue-button-color);
+}
+
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox:checked {
+  width: 100px;
+  height: 100px;
 }

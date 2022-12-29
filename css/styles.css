@@ -523,7 +523,7 @@ button {
 .bottom-container {
   width: 1158px;
   display: flex;
-  align-items: center;
+  align-items: baseline;
 }
 
 .logo-block {
@@ -792,6 +792,9 @@ textarea {
   margin-bottom: 16px;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
+  outline: none;
+  padding-top: 8px;
+  padding-left: 16px;
 }
 
 textarea::placeholder {
@@ -799,8 +802,6 @@ textarea::placeholder {
   line-height: 16px;
   color: rgba(117, 117, 117, 0.5);
   letter-spacing: 0.04em;
-  padding-top: 8px;
-  padding-left: 16px;
   outline: none;
 }
 
@@ -808,7 +809,7 @@ input {
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   transition: border 250ms var(--timing-function);
-  /* outline: none; */
+  outline: none;
 }
 
 .inputs {
@@ -816,8 +817,10 @@ input {
   height: 40px;
   padding-left: 38px;
   width: 100%;
+  margin-top: 4px;
 }
-
+textarea:hover,
+textarea:focus,
 input:hover,
 input:focus,
 input:active {
@@ -829,6 +832,13 @@ input:active {
 input:active.svg-modal  */
 .inputs:hover > .svg-modal {
   fill: var(--blue-button-color);
+}
+
+.inputs:focus + .icon-checkbox {
+}
+
+.icon-checkbox:focus {
+  border-color: #2e2f42;
 }
 
 .send {
@@ -854,7 +864,7 @@ input:active.svg-modal  */
 
 .modal-form svg {
   position: absolute;
-  top: 32px;
+  top: 36px;
   left: 19px;
   transition: fill 250ms var(--timing-function);
 }
@@ -877,6 +887,9 @@ input:hover + svg {
   color: var(--blue-button-text-color);
 }
 
+.container-input {
+  width: 264px;
+}
 .subscribe-container {
   margin-left: 80px;
   align-items: center;
@@ -903,7 +916,6 @@ input:hover + svg {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  width: 264px;
   height: 40px;
   background-color: inherit;
   color: #ffffff;
@@ -952,11 +964,16 @@ input:hover + svg {
 }
 
 .icon-checkbox {
+  color: #2e2f42;
+  position: absolute;
+  left: 0;
   display: inline-block;
+  background-origin: border-box;
   width: 16px;
   height: 16px;
-  border: 1px solid black;
-  border-radius: 4px;
+  outline: auto;
+  border: 1.25px solid #2e2f42;
+  border-radius: 2px;
   transition: background-color 250ms var(--timing-function);
 }
 
@@ -966,11 +983,16 @@ input:hover + svg {
   background-size: contain;
   background-origin: border-box;
   border-color: #404bbf;
+  outline: none;
 }
 
 .policy {
   display: flex;
-  flex-direction: row-reverse;
-  gap: 8px;
+  gap: 4px;
   align-items: center;
+  position: relative;
+  padding-left: 24px;
+}
+
+.policy-link {
 }

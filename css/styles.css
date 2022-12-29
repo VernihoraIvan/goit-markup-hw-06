@@ -834,8 +834,8 @@ input:active.svg-modal  */
   fill: var(--blue-button-color);
 }
 
-.inputs:focus + .icon-checkbox {
-}
+/* .inputs:focus + .icon-checkbox {
+} */
 
 .icon-checkbox:focus {
   border-color: #2e2f42;
@@ -919,6 +919,7 @@ input:hover + svg {
   height: 40px;
   background-color: inherit;
   color: #ffffff;
+  padding: 8px 212px 8px 16px;
 }
 
 .subscribe-button {
@@ -936,7 +937,9 @@ input:hover + svg {
 }
 
 .subscribe-input::placeholder {
-  padding: 8px 212px 8px 16px;
+  /* padding: 8px 212px 8px 16px; */
+  font-size: 12px;
+  line-height: 2;
 }
 
 .subscribe-button:hover,
@@ -992,7 +995,4 @@ input:hover + svg {
   align-items: center;
   position: relative;
   padding-left: 24px;
-}
-
-.policy-link {
 }

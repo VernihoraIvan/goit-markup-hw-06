@@ -134,11 +134,11 @@ div:focus,
   align-items: center;
 }
 
-.envelop::before {
+.envelope::before {
   content: "";
   width: 24px;
   height: 24px;
-  background-image: url(../images/icon.svg#icon-envelop);
+  background-image: url(../images/icon.svg#icon-envelope);
   background-size: contain;
 }
 .container-header {

@@ -908,6 +908,7 @@ input:hover + svg {
   display: flex;
   align-items: center;
   gap: 24px;
+  margin-left: 80px;
 }
 
 .subscribe-input {
